@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/extensions/text_style_extention.dart';
@@ -20,7 +21,9 @@ class HomePage extends StatelessWidget {
                     children: [
                       Text(
                         "Tesla Model X",
-                        style: context.title,
+                        style: context.title.copyWith(
+                          color: Colors.red,
+                        ),
                       ),
                       Text(
                         "150 km · Parked",
@@ -28,7 +31,11 @@ class HomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-
+                  Spacer(),
+                  CupertinoButton(
+                    onPressed: () {},
+                    child: Icon(Icons.person),
+                  ),
                 ],
               ),
             ],
